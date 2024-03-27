@@ -1,0 +1,1 @@
+let varName = "I'm excited to be learning javascript"
