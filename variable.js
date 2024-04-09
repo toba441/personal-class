@@ -33,6 +33,16 @@ console.log(firstName + " " + lastName);
 
 // ASSIGMENT
 // 1. Declare a mutable variable
+// let favColor;
 // 2. Assign the mutable variable you declared to save your fav color
+//favColor = 'green';
 // 3. Declare and assign an immutable variable to save your nickname
+// const nickName = 'Danny';
 // 4. Print to the console or terminal your saved fav color and nickname.
+// console.log(favColor, nickName);
+
+// Naming of Variables
+// 1. Camel Case Naming
+//let dannyIsTall
+// 2. snake case naming
+// let danny_is_tall; 
