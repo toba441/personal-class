@@ -70,3 +70,60 @@ console.log(isTall, isDark);
 // Note: that the '!' is an opposite of true of false. (Not operator)
 
 console.log(numStr !== '5');
+
+// Non-primitive Data type
+// 1. Array   2. Objects (key, value pairs) 3. Date 
+
+// ARRAY
+let myArray = ["Stark", "Lanister", 'Baratheon', "Greyjoy", "Woodcrest", "Snow"]   // square brackets
+console.log(Array.isArray(myArray));
+
+// console.log(myArray[0]);
+// console.log(myArray[1]);
+// console.log(myArray[2]);
+// console.log(myArray[3]);
+// console.log(myArray[4]);
+// console.log(myArray[myArray.length - 1]) // Last value of an Array ([theArray.length - 1])
+
+// Note 
+myArray.forEach((v, i) => console.log(v, i))
+let newArray = myArray.filter((v, i) => {
+    return i !== 3
+})
+
+let mapArray = myArray.map(v => {
+    return v + " dan"
+})
+
+myArray.pop()
+myArray.push('hushland')
+
+console.log(myArray);
+console.log(newArray);
+console.log(mapArray);
+// let myNums = []
+
+// For Loops
+// initialize i //condition // increment or decrement
+// for (let i = 0; i <= 100; i++) {
+//     let div = i % 2 
+//     if (div !== 0) {
+//         myNums.push(i);
+//         continue
+//     }
+//     // if (i === 50) {
+//     //     // console.log("Ouch, I think I just stopped")
+//     //     continue;
+//     // }
+//     console.log(i);
+// }
+// console.log(myNums)
+
+// Assignment
+// 1. create an array to store your fav musicians (least of your musicians should 10)
+// 2. print out to the terminal the length of your array
+// 3. Loop through your array using the for and the forEach loop
+// 4. Remove the last musican in your array
+// 5  Add another musician to your array
+// 6. create a new array to accommodate the list of your musicians with one of their music --- tips use the map function
+// 7. Remove the 6th index of musician from your array
