@@ -78,6 +78,13 @@ console.log(numStr !== '5');
 let myArray = ["Stark", "Lanister", 'Baratheon', "Greyjoy", "Woodcrest", "Snow"]   // square brackets
 console.log(Array.isArray(myArray));
 
+const firstElement = myArray[0]
+
+const lastElement = myArray[myArray.length - 1]
+
+console.log("first element in myArray = ", firstElement);
+console.log("last element in myArray = ", lastElement);
+
 // console.log(myArray[0]);
 // console.log(myArray[1]);
 // console.log(myArray[2]);
@@ -85,10 +92,15 @@ console.log(Array.isArray(myArray));
 // console.log(myArray[4]);
 // console.log(myArray[myArray.length - 1]) // Last value of an Array ([theArray.length - 1])
 
+// Higher order functions (in some programming language they can be seen as lambda expressions or lambda functions)
+
 // Note 
-myArray.forEach((v, i) => console.log(v, i))
+myArray.forEach((v, i) =>  console.log("my fav character ", v))
+
+const newMyArray = myArray.map((v) => v + " favs")
+console.log(newMyArray);
 let newArray = myArray.filter((v, i) => {
-    return i !== 3
+    return v !== "Stark"
 })
 
 let mapArray = myArray.map(v => {
@@ -126,4 +138,64 @@ console.log(mapArray);
 // 4. Remove the last musican in your array
 // 5  Add another musician to your array
 // 6. create a new array to accommodate the list of your musicians with one of their music --- tips use the map function
-// 7. Remove the 6th index of musician from your array
+// 7. Remove the 6th index of musician from your array --- use filter method || splice 
+
+const favMusicians = ["Davido", "Wizkid", "BNXN", "Rihanna", "RKelly", "Selina Gomez", "Michael Jackson", "Don Meon", "Drake", "Eminem"]
+console.log(favMusicians.length);
+
+// Looping using for loop
+
+for (let i = 0; i < favMusicians.length; i++) {
+    console.log(favMusicians[i]);
+}
+
+favMusicians.forEach((v) => console.log(v))
+
+for (let x of favMusicians) {
+    console.log("for of loop: ", x);
+}
+
+favMusicians.pop()
+
+console.log(favMusicians);
+
+favMusicians.push("Ololade")
+
+console.log(favMusicians);
+
+// const favArray = []
+
+// favMusicians.forEach((v, i) => {
+//     if (i === 5){
+//         favArray.push("Danny")
+//     }
+
+//     favArray.push(v)
+// }) 
+
+favMusicians.splice(6, 1)
+
+console.log(favMusicians);
+
+const filterMusicians = favMusicians.filter((v, i) => i !== 6)
+
+console.log(filterMusicians);
+
+
+// object || key value pair (in some languages it's called hashmap or dictionary)
+let person = {
+    firstName: "Michael",
+    lastname: "Jackson",
+    age: 51,
+    complexion: "light",
+    isHeTall: true,
+}
+
+console.log(person.isHeTall);
+
+console.log(Object.values(person));
+
+console.log(new Date()); // print out the current time
+
+const currentDate = new Date().getDate()
+console.log(currentDate);
